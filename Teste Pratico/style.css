@@ -1,0 +1,180 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+h1,
+h2,
+h4 {
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+.sub-title{
+    font-weight: 500;
+    color: #dadada;
+    font-size:16px;
+    padding-bottom:20px;
+}
+
+
+body {
+    background: radial-gradient(circle at top left, #0a3d5f, transparent 50%),
+        radial-gradient(circle at bottom right, #07374a, #010a11, #000000);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+    max-width:1000px;
+    background-color: #010910;
+    border: 2px solid #052A3A;
+    box-shadow: 0px 0px 13px #052A3A;
+    border-radius:20px;
+    padding:15px;
+    position: relative;
+    height: 350px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 35px;
+    border-radius: 10px;
+    transition: .4s ease-in-out;
+    width:300px;
+    height: 350px;
+    z-index: 2;
+}
+
+.form-title{
+    font-size:26px;
+    font-weight: 600;
+    margin-bottom:10px;
+}
+
+input {
+    background: #0f0f0f;
+    border-bottom: 2px solid #052A3A;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 15px 0px 15px 10px;
+    outline: none;
+    width: 100%;
+    color: #d3d3d3;
+    font-size:14px;
+    font-weight: 500;
+    border-radius:5px;
+    transition: .4s ease-in-out;
+}
+
+input:focus{
+    border-color:#51C1FF;
+}
+
+input:valid{
+    border-color:#51C1FF;
+}
+
+.btn-form{
+    margin-top:10px;
+    color:#fff;
+    background:linear-gradient(325deg,#61daff 0%,#1f75ff 55%,#61daff 90%);
+    border:1px solid #1f75ff;
+    border-radius:5px;
+    padding:7px 24px;
+    width:100%;
+    font-weight:700;
+    font-size:17px;
+    cursor: pointer;
+}
+
+.info{
+    background: url("./img/team.png") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    gap:5px;
+    border-radius:10px;
+    width: 470px;
+    padding:0px 20px;
+}
+
+.info::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), #000);
+    left: 0; 
+    top: 0; 
+    border-radius:10px;
+}
+
+.form{
+    position: relative;
+    width: 370px;
+    height: 350px;
+}
+
+.flip{
+    position: absolute;
+    width: 100%; 
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.flip-front, .flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+
+}
+
+.flip-front{
+    background: #010910;
+    z-index:2;
+}
+.flip-back{
+    background: red;
+    z-index:1;
+    transform: rotateY(180deg);
+}
+
+.form:hover .flip {
+    transform: none;
+}
+
+.flip.flipped {
+    transform: rotateY(180deg);
+}
+
+.form.flipped:hover .flip {
+    transform: rotateY(180deg); 
+}
