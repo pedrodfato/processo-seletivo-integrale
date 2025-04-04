@@ -22,12 +22,12 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Atualiza os elementos visuais com os valores digitados
+        
         displayName.textContent = nameValue;
         displayEmail.textContent = emailValue;
         displayPassword.textContent = passwordValue;
 
-        // Cria o objeto de dados para enviar ao webhook
+        
         const formData = {
             name: nameValue,
             email: emailValue,
