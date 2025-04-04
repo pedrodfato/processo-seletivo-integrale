@@ -18,16 +18,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const passwordValue = passwordInput.value.trim();
 
         if (nameValue === "" || emailValue === "" || passwordValue === "") {
-            alert("Por favor, preencha todos os campos.");
             return;
         }
 
-        
         displayName.textContent = nameValue;
         displayEmail.textContent = emailValue;
         displayPassword.textContent = passwordValue;
 
-        
         const formData = {
             name: nameValue,
             email: emailValue,
@@ -42,15 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 body: JSON.stringify(formData)
             });
-
-            if (response.ok) {
-                alert("Dados enviados com sucesso!");
-            } else {
-                alert("Erro ao enviar os dados.");
-            }
         } catch (error) {
             console.error("Erro:", error);
-            alert("Erro ao enviar os dados.");
         }
 
         flipContainer.classList.add("flipped");
