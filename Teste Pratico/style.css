@@ -4,6 +4,18 @@
     padding: 0px;
 }
 
+body {
+    background: radial-gradient(circle at top left, #0a3d5f, transparent 50%),
+        radial-gradient(circle at bottom right, #07374a, #010a11, #000000);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 h1,
 h2,
 h4 {
@@ -23,18 +35,6 @@ p{
     padding-bottom:10px;
 }
 
-
-body {
-    background: radial-gradient(circle at top left, #0a3d5f, transparent 50%),
-        radial-gradient(circle at bottom right, #07374a, #010a11, #000000);
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
 .section {
     display: flex;

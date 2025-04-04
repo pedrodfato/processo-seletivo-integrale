@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const displayPassword = document.querySelector("#display-password");
 
     form.addEventListener("submit", async function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         const nameValue = nameInput.value.trim();
         const emailValue = emailInput.value.trim();
