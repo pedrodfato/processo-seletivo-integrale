@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const response = await fetch("https://primary-production-16af.up.railway.app/webhook-test/4aa7f555-013c-4499-9146-df1564ad3068", {
+            const response = await fetch("https://primary-production-16af.up.railway.app/webhook/4aa7f555-013c-4499-9146-df1564ad3068", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
